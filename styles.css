@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: dodgerblue;
+}
+
+.card-timer {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 026);
+  min-height: 160px;
+}
+
+.card-timer-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-height: 100px;
+}
+.boiling-card-input {
+  border-bottom: 1px solid rgb(190, 189, 189);
+  width: 150px;
+  min-width: max-content;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+}
+
+.boiling-card-input:focus-within {
+  outline: 1px solid rgb(255, 143, 68);
+}
+
+.boiling-card-button {
+  width: 100px;
+  min-width: max-content;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+}
+.card-boiling-group {
+  display: grid;
+  margin-top: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
+  min-height: 60px;
+  max-width: 290px;
+  max-height: 200px;
+  transition: min-height 500ms;
+}
+
+.card-boiler {
+  all: unset;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  background-color: rgb(255, 143, 68);
+  font-weight: 700;
+  animation: boil 1s infinite;
+  transition: opacity 1s;
+}
+
+.invisibleElement {
+  opacity: 0;
+}
+
+@keyframes boil {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
